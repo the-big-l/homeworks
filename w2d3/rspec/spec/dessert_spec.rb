@@ -28,24 +28,52 @@ describe Dessert do
   end
 
   describe "#add_ingredient" do
-    it "adds an ingredient to the ingredients array"
+    it "adds an ingredient to the ingredients array" do
+      brownie.add_ingredient('nuts')
+      expect(brownie.ingredients).to include('nuts')
+    end
   end
 
   describe "#mix!" do
-    it "shuffles the ingredient array"
+    it "shuffles the ingredient array" do
+      initial_ingredients = ['nuts', 'egg', 'oil', 'flour', 'chocolate']
+      initial_ingredients.each do |ingredient|
+        brownie.add_ingredient(ingredient)
+      end
+
+      expect(brownie.ingredients).to eq(initial_ingredients)
+      brownie.mix!
+      expect(brownie.ingredients).to_not eq(initial_ingredients)
+      expect(brownie.ingredients.sort).to eq(initial_ingredients.sort)
+    end
   end
 
   describe "#eat" do
-    it "subtracts an amount from the quantity"
+    it "subtracts an amount from the quantity" do
+      initial_amount = brownie.quantity
+      brownie.eat(rand(50))
+      expect(brownie.quantity).to be < initial_amount
+    end
 
-    it "raises an error if the amount is greater than the quantity"
+    it "raises an error if the amount is greater than the quantity" do
+      msg = 'not enough left!'
+      expect { brownie.eat(999) }.to raise_error(msg)
+    end
   end
 
   describe "#serve" do
-    it "contains the titleized version of the chef's name"
+    it "contains the titleized version of the chef's name" do
+      allow(chef).to receive(:titleize).and_return('Leo W Salat')
+
+      expect(brownie.serve).to include('Leo W Salat')
+    end
   end
 
   describe "#make_more" do
-    it "calls bake on the dessert's chef with the dessert passed in"
+    it "calls bake on the dessert's chef with the dessert passed in" do
+      expect(chef).to receive(:bake).with(brownie)
+      
+      brownie.make_more
+    end
   end
 end
