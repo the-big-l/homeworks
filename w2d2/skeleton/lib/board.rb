@@ -48,7 +48,7 @@ class Board
       end
     end
 
-    render
+    # render
     next_turn(cup_idx)
   end
 
