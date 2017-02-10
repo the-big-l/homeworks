@@ -1,3 +1,13 @@
+# == Schema Information
+#
+# Table name: routes
+#
+#  id         :integer          not null, primary key
+#  number     :integer
+#  created_at :datetime
+#  updated_at :datetime
+#
+
 class Route < ActiveRecord::Base
   has_many(
     :buses,
@@ -5,6 +15,10 @@ class Route < ActiveRecord::Base
     foreign_key: :route_id,
     primary_key: :id
   )
+
+  has_many :drivers,
+    through: :buses,
+    source: :drivers
 
   def n_plus_one_drivers
     buses = self.buses
@@ -23,5 +37,10 @@ class Route < ActiveRecord::Base
 
   def better_drivers_query
     # TODO: your code here
+    bd = Hash.new { |h, k| h[k] = [] }
+    
+    self.drivers.each { |d| bd[d.bus_id] << d.name }
+
+    bd
   end
 end

@@ -1,3 +1,14 @@
+# == Schema Information
+#
+# Table name: buses
+#
+#  id         :integer          not null, primary key
+#  model      :string
+#  route_id   :integer
+#  created_at :datetime
+#  updated_at :datetime
+#
+
 class Bus < ActiveRecord::Base
   belongs_to(
     :route,

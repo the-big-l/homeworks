@@ -1,3 +1,12 @@
+# == Schema Information
+#
+# Table name: gardeners
+#
+#  id       :integer          not null, primary key
+#  name     :string
+#  house_id :integer
+#
+
 class Gardener < ActiveRecord::Base
   belongs_to(
     :house,

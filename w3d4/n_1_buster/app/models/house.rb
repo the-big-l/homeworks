@@ -1,3 +1,11 @@
+# == Schema Information
+#
+# Table name: houses
+#
+#  id      :integer          not null, primary key
+#  address :string
+#
+
 class House < ActiveRecord::Base
   has_many(
     :gardeners,
@@ -12,6 +20,10 @@ class House < ActiveRecord::Base
     source: :plants
   )
 
+  has_many :seeds,
+    through: :plants,
+    source: :seeds
+
   def n_plus_one_seeds
     plants = self.plants
     seeds = []
@@ -24,5 +36,6 @@ class House < ActiveRecord::Base
 
   def better_seeds_query
     # TODO: your code here
+    self.seeds
   end
 end

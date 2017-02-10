@@ -1,3 +1,12 @@
+# == Schema Information
+#
+# Table name: seeds
+#
+#  id       :integer          not null, primary key
+#  count    :integer
+#  plant_id :integer
+#
+
 class Seed < ActiveRecord::Base
   belongs_to(
     :plant,
