@@ -1,4 +1,5 @@
 <html>
+<html>
   <head>
     <title>Leo Salat Recipe</title>
   </head>
@@ -7,9 +8,9 @@
     <header>
       <nav>
         <ul>
-        <li><a href="#top-of-page">Back to top</a></li>
-        <li><a href="#ingredients">Ingredients</a></li>
-        <li><a href="#directions">Description</a></li>
+          <li><a href="#top-of-page">Back to top</a></li>
+          <li><a href="#ingredients">Ingredients</a></li>
+          <li><a href="#directions">Description</a></li>
         </ul>
       </nav>
     </header>
@@ -28,7 +29,7 @@
 
 
 
-      <h2 id="description">Description</h2>
+      <h2\>Description</h2>
       <p>This is a secret recipe invented by me.</p>
       <a name="ingredients" />
       <h2>Ingredients</h2>
@@ -48,6 +49,47 @@
         <li>Turn over half-way</li>
         <li>Finish with a sprig a mint</li>
       </ol>
+    </section>
+    <section>
+      <h2>Comments</h2>
+      <form action="/review" method="get">
+
+        <label for="name">Name</label>
+        <input id="name" type="text" name="name">
+
+        <br>
+
+        <div align="left"><br>
+          <label for="rating">Rating</label><br>
+          <input type="radio" name="rating" id="rating" value="1" checked> 1<br>
+          <input type="radio" name="rating" id="rating" value="2"> 2<br>
+          <input type="radio" name="rating" id="rating" value="3"> 3<br>
+          <input type="radio" name="rating" id="rating" value="4"> 4<br>
+          <input type="radio" name="rating" id="rating" value="5"> 5<br>
+        </div>
+
+        <br>
+
+        <label for="expertise">Cooking Expertise</label><br>
+        <select id="expertise" name="expertise">
+          <option disabled selected>-- Select Cooking Expertise --</option>
+          <option value="Sometimes Cook">Sometimes Cook</option>
+          <option value="Cook Everyday">Cook Everyday</option>
+          <option value="Cooking is a Hobby">Cooking is a Hobby</option>
+          <option value="Professional Chef">Professional Chef</option>
+        </select>
+
+        <br><br>
+<!-- Code a label element for "Review" but this time place the
+corresponding textarea element inside the label element instead of using for/id. -->
+        <label>Review<br>
+          <textarea name="review" cols="30" rows="5"></textarea>
+        </label>
+
+        <br>
+
+        <input type="submit" value="submit review">
+      </form>
     </section>
 
     <footer>
