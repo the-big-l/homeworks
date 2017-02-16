@@ -1,18 +1,9 @@
 <p id="notice"><%= notice %></p>
 
+<h2>Profile page!</h2>
 <p>
   <strong>Username:</strong>
   <%= @user.username %>
-</p>
-
-<p>
-  <strong>Password digest:</strong>
-  <%= @user.password_digest %>
-</p>
-
-<p>
-  <strong>Session token:</strong>
-  <%= @user.session_token %>
 </p>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
