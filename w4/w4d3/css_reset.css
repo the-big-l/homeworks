@@ -25,9 +25,23 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
   line-height: 1.5;
+  font-family: Ariel, sans-serif;
+  color: #680079
 }
 ol, ul {
   list-style: none;
+}
+h1 {
+  font-size: 38px;
+}
+
+.ingredients-list {
+
+  list-style: square inside;
+}
+
+h2 {
+  font-size: 32px;
 }
 blockquote, q {
   quotes: none;
