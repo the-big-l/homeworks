@@ -14,11 +14,12 @@
 
     </script>
     <script type="text/javascript" src="w4/w4d3/ext_js_file.js"></script>
-    <link rel="stylesheet" href="w4/w4d3/css_reset.css" type="text/css">
+    <link rel="stylesheet" href="w6d1/css_custom_reset.css" type="text/css">
   </head>
   <body>
     <a name="top-of-page"></a>
-    <header>
+    <header class="group">
+      <img class="header-logo" src="w6d1/aa.png">
       <nav>
         <ul>
           <li><a href="#top-of-page">Back to top</a></li>
@@ -28,83 +29,81 @@
       </nav>
     </header>
 
-    <aside>
-      <figure>
-        <img src="w4/w4d1/stock-photo-freshly-baked-rhubarb-pie-sliced-and-ready-to-serve-206679715.jpg" />
-        <figcaption>
-          <a href="https://en.wikipedia.org/wiki/Rhubarb_pie">See more about this yummy dessert</a>
-        </figcaption>
-      </figure>
-    </aside>
+    <div class="col col-1-3">
+      <aside>
+        <a name="ingredients"></a>
+        <h2>Ingredients</h2>
+        <ul class="ingredients-list">
+          <li>Flour</li>
+          <li>Shortening</li>
+          <li>sugar</li>
+          <li>rhubarb</li>
+        </ul>
+      </aside>
+    </div>
 
-    <section>
-      <h1>Rhubarb Pie</h1>
+    <div class="col col-2-3">
+      <section>
+        <h1>Rhubarb Pie</h1>
 
+        <figure>
+          <img src="w4/w4d1/stock-photo-freshly-baked-rhubarb-pie-sliced-and-ready-to-serve-206679715.jpg" />
+          <figcaption>
+            <a href="https://en.wikipedia.org/wiki/Rhubarb_pie">See more about this yummy dessert</a>
+          </figcaption>
+        </figure>
 
+        <h2>Description</h2>
+        <p>This is a great recipe invented by american settlers.</p>
 
-      <h2>Description</h2>
-      <p>This is a secret recipe invented by me.</p>
-      <a name="ingredients"></a>
-      <h2>Ingredients</h2>
+        <a name="directions"></a>
+        <h2>Directions</h2>
+        <ol class="directions">
+          <li>Make the crust</li>
+          <li>add the filling</li>
+          <li>Put the pie in the oven</li>
+          <li>Bake for 50 minutes</li>
+          <li>Turn over half-way</li>
+          <li>cover with aluminum foil</li>
+          <li>Finish with a sprig a mint</li>
+        </ol>
 
-      <ul class="ingredients-list">
-        <li>Flour</li>
-        <li>Shortening</li>
-        <li>sugar</li>
-        <li>rhubarb</li>
-      </ul>
+        <section id="reviews">
+          <h2>Comments</h2>
+          <form id="review-form" action="/review" method="get">
 
-      <a name="directions"></a>
-      <h2>Directions</h2>
-      <ol>
-        <li>Put the pie in the oven</li>
-        <li>Bake for 50 minutes</li>
-        <li>Turn over half-way</li>
-        <li>Finish with a sprig a mint</li>
-      </ol>
-    </section>
+            <label for="name">Name</label>
+            <input id="name" type="text" name="name">
 
-    <section id="reviews">
-      <h2>Comments</h2>
-      <form id="review-form" action="/review" method="get">
+            <div align="left">
+              <label for="rating">Rating</label>
+              <input type="radio" name="rating" id="rating" value="1" checked> 1
+              <input type="radio" name="rating" id="rating" value="2"> 2
+              <input type="radio" name="rating" id="rating" value="3"> 3
+              <input type="radio" name="rating" id="rating" value="4"> 4
+              <input type="radio" name="rating" id="rating" value="5"> 5
+            </div>
 
-        <label for="name">Name</label>
-        <input id="name" type="text" name="name">
+            <label for="expertise">Cooking Expertise</label>
+            <select id="expertise" name="expertise">
+              <option disabled selected>-- Select Cooking Expertise --</option>
+              <option value="Sometimes Cook">Sometimes Cook</option>
+              <option value="Cook Everyday">Cook Everyday</option>
+              <option value="Cooking is a Hobby">Cooking is a Hobby</option>
+              <option value="Professional Chef">Professional Chef</option>
+            </select>
 
-        <br>
+            <br>
 
-        <div align="left"><br>
-          <label for="rating">Rating</label><br>
-          <input type="radio" name="rating" id="rating" value="1" checked> 1<br>
-          <input type="radio" name="rating" id="rating" value="2"> 2<br>
-          <input type="radio" name="rating" id="rating" value="3"> 3<br>
-          <input type="radio" name="rating" id="rating" value="4"> 4<br>
-          <input type="radio" name="rating" id="rating" value="5"> 5<br>
-        </div>
+            <label>Review<br>
+              <textarea name="review" cols="30" rows="5"></textarea>
+            </label>
 
-        <br>
-
-        <label for="expertise">Cooking Expertise</label><br>
-        <select id="expertise" name="expertise">
-          <option disabled selected>-- Select Cooking Expertise --</option>
-          <option value="Sometimes Cook">Sometimes Cook</option>
-          <option value="Cook Everyday">Cook Everyday</option>
-          <option value="Cooking is a Hobby">Cooking is a Hobby</option>
-          <option value="Professional Chef">Professional Chef</option>
-        </select>
-
-        <br><br>
-<!-- Code a label element for "Review" but this time place the
-corresponding textarea element inside the label element instead of using for/id. -->
-        <label>Review<br>
-          <textarea name="review" cols="30" rows="5"></textarea>
-        </label>
-
-        <br>
-
-        <input type="submit" value="submit review">
-      </form>
-    </section>
+            <input type="submit" value="submit review">
+          </form>
+        </section>
+      </section>
+    </div>
 
     <footer>
       <p>credit to the author: Leo Salat</p>

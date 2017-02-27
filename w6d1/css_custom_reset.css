@@ -1,0 +1,139 @@
+html, body, header, nav, aside, figure,
+img, figcaption, ul, li, a, section,
+h1, h2, p, ol, form, label, input,
+div, label, textarea, footer, option,
+article {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+body {
+  margin: 0 auto;
+  width: 900px;
+}
+
+h1 {
+  font-size: 38px;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+input[type="radio"],
+option,
+input[type="submit"] {
+  cursor: pointer;
+  outline: none;
+}
+
+ol {
+  list-style: upper-roman inside;
+}
+
+
+input[type="submit"]:last-child {
+  background-color: gold;
+}
+input[type="submit"]:last-child:hover {
+  -webkit-filter: brightness(90%);
+}
+
+ol.directions li:nth-of-type(odd) {
+  background-color: grey;
+  -webkit-filter: brightness(150%);
+}
+
+h2 + .user_review {
+  border-top: 1px solid black;
+}
+
+input[type="text"] {
+  border: 1px solid black;
+}
+textarea {
+  border: 1px solid black;
+}
+
+input[type="radio"] {
+  width: 27px;
+  height: 27px;
+  background-image: url(stars.png);
+  background-position: 30px -30px;
+}
+
+input[type="radio"]:checked {
+  background-position: 30px 30px;
+}
+
+nav {
+    display: inline-block;
+}
+
+nav ul li {
+    display:  inline-block;
+}
+
+nav ul li a {
+    padding: 20px;
+    display: block;
+}
+
+.ingredients-list {
+  list-style: square inside;
+}
+
+.ingredients-list li {
+ margin: 15px 0px;
+}
+
+.header-logo {
+  width: 5%;
+  height: auto;
+  display: inline;
+}
+
+section {
+    width: 700px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+aside {
+    width: 180px;
+    margin-right: 15px;
+    display: inline-block;
+}
+
+ul li a, figcaption a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.col {
+  float: left;
+  box-sizing: border-box;
+}
+
+.col-2-3 {
+  width: 66.6666%;
+}
+
+.col-1-3 {
+  width: 33.3333%;
+}
+
+img {
+  width: 50%;
+  heigth: auto;
+}
+.group:after {
+  content: '';
+  display: block;
+  clear: both;
+}
