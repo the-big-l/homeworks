@@ -157,3 +157,13 @@ input[type="submit"] {
   display: block;
   clear: both;
 }
+
+#hamburger-dropdown {
+  background-image: url(./w6d2/hamburger.png);
+}
+
+@media all and (max-width: 850px) {
+  [class*='col-'] {
+      width: 100%;
+  }
+}
