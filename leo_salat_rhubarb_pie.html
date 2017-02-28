@@ -17,9 +17,8 @@
     <link rel="stylesheet" href="w6d1/css_custom_reset.css" type="text/css">
   </head>
   <body>
-    <a name="top-of-page"></a>
-    <header class="group">
-      <img class="header-logo" src="w6d1/aa.png">
+    <header id="top-of-page" class="group">
+      <img class="header-logo" src="w6d1/aa.png" alt="logo">
       <nav>
         <ul>
           <li><a href="#top-of-page">Back to top</a></li>
@@ -31,13 +30,14 @@
 
     <div class="col col-1-3">
       <aside>
-        <a name="ingredients"></a>
-        <h2>Ingredients</h2>
+        <h2 id="ingredients">Ingredients</h2>
         <ul class="ingredients-list">
           <li>Flour</li>
           <li>Shortening</li>
           <li>sugar</li>
           <li>rhubarb</li>
+          <li>ice water</li>
+          <li>salt</li>
         </ul>
       </aside>
     </div>
@@ -47,7 +47,7 @@
         <h1>Rhubarb Pie</h1>
 
         <figure>
-          <img src="w4/w4d1/stock-photo-freshly-baked-rhubarb-pie-sliced-and-ready-to-serve-206679715.jpg" />
+          <img src="w4/w4d1/stock-photo-freshly-baked-rhubarb-pie-sliced-and-ready-to-serve-206679715.jpg" alt="image of pie"/>
           <figcaption>
             <a href="https://en.wikipedia.org/wiki/Rhubarb_pie">See more about this yummy dessert</a>
           </figcaption>
@@ -56,8 +56,8 @@
         <h2>Description</h2>
         <p>This is a great recipe invented by american settlers.</p>
 
-        <a name="directions"></a>
-        <h2>Directions</h2>
+        <h2 id="directions">Directions</h2>
+
         <ol class="directions">
           <li>Make the crust</li>
           <li>add the filling</li>
@@ -75,17 +75,15 @@
             <label for="name">Name</label>
             <input id="name" type="text" name="name">
 
-            <div align="left">
-              <label for="rating">Rating</label>
-              <input type="radio" name="rating" id="rating" value="1" checked> 1
-              <input type="radio" name="rating" id="rating" value="2"> 2
-              <input type="radio" name="rating" id="rating" value="3"> 3
-              <input type="radio" name="rating" id="rating" value="4"> 4
-              <input type="radio" name="rating" id="rating" value="5"> 5
-            </div>
+            <label for="rating">Rating</label>
+            <input type="radio" name="rating" id="rating" value="1" checked> 1
+            <input type="radio" name="rating" id="rating" value="2"> 2
+            <input type="radio" name="rating" id="rating" value="3"> 3
+            <input type="radio" name="rating" id="rating" value="4"> 4
+            <input type="radio" name="rating" id="rating" value="5"> 5
 
             <label for="expertise">Cooking Expertise</label>
-            <select id="expertise" name="expertise">
+            <select id="expertise" name="expertise" class="col-1-3">
               <option disabled selected>-- Select Cooking Expertise --</option>
               <option value="Sometimes Cook">Sometimes Cook</option>
               <option value="Cook Everyday">Cook Everyday</option>
@@ -93,9 +91,7 @@
               <option value="Professional Chef">Professional Chef</option>
             </select>
 
-            <br>
-
-            <label>Review<br>
+            <label class="col-1-3">Review
               <textarea name="review" cols="30" rows="5"></textarea>
             </label>
 
