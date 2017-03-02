@@ -18,8 +18,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // adding SF places as list items
 
-  // --- your code here!
+  const addPlace = (e) => {
 
+  }
+
+  const restaurantList = document.querySelectorAll("ul#restaurants");
+
+  const listSubmitButton = document.querySelector(".favorite-submit");
+  listSubmitButton.addEventListener("click", addPlace);
 
 
   // adding new photos
