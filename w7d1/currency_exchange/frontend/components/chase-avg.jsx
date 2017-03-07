@@ -14,4 +14,4 @@ const ChaseAvg = ({rates, length}) => {
   );
 }
 
-export default ChaseAvg
+export default ChaseAvg;
