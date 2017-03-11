@@ -1,0 +1,87 @@
+html, body, head, title, header, img, ul,
+li, a, div, footer, div, p, figure,
+figcaption, section, h1, h2, h3, h4 {
+  margin: 0;
+  padding: 0;
+  text-decoration: inherit;
+  font-family: inherit;
+  color: inherit;
+  text-align: inherit;
+}
+
+img {
+  width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+@font-face {
+  font-family: American Typewriter;
+  src: local("American Typewriter")
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+}
+
+div.logo-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+img.logo {
+  height: 50px;
+  width: auto;
+}
+
+p.logo-text {
+  font-family: American Typewriter, cursive;
+  color: green;
+  font-size: 32px;
+  margin-left: 10px;
+}
+
+div.right-panel {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: #848484;
+  text-decoration: none;
+}
+
+nav ul li {
+  font-size: 14px;
+  margin: 8px;
+}
+
+section.hero-container {
+
+}
+
+section.hero-container figure.content-container {
+  position: relative;
+  max-height: 600px;
+  overflow: hidden;
+}
+
+section.hero-container figure figcaption{
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  text-align: center;
+}
